@@ -11,6 +11,12 @@ import getFilesDetailsNews from "./news/getFilesDetailsNews";
 import getNews from "./news/getNews";
 import getNewsList from "./news/getNewsList";
 import removeFileNews from "./news/removeFileNews";
+import createAssets from "./assets/createAssets";
+import deleteAssets from "./assets/deleteAssets";
+import getFilesDetailsAssets from "./assets/getFilesDetailsAssets";
+import getAssets from "./assets/getAssets";
+import getAssetsList from "./assets/getAssetsList";
+import removeFileAssets from "./assets/removeFileAssets";
 
 export default {
     registerUser,
@@ -26,4 +32,10 @@ export default {
     getNews,
     getNewsList,
     removeFileNews,
+    createAssets,
+    deleteAssets,
+    getFilesDetailsAssets,
+    getAssets,
+    getAssetsList,
+    removeFileAssets
 };

@@ -7,6 +7,7 @@ import menaxhimiLibrariseRoute from './api/routes/menaxhimiLibrariseRoute';
 import mongoose from 'mongoose';
 import fileupload from"express-fileupload";
 import newsRoute from './api/routes/newsRoute';
+import assetsRoute from './api/routes/assetsRoute';
 
 mongoose.connect("mongodb://localhost:27017/menaxhimi-librarise-db").then( () => {
   console.log('Connected to mongodb, port 27017!');
@@ -39,6 +40,7 @@ app.use('/users', usersRouter );
 
 app.use('/menaxhimi-librarise', menaxhimiLibrariseRoute);
 app.use('/news', newsRoute);
+app.use('/assets', assetsRoute);
 
 app.listen(port, () => {
     console.log(`Menaxhimi i librarise API running on port ${port}`);
