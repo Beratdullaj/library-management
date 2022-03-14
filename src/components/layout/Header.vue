@@ -15,6 +15,11 @@
           </router-link>
         </li>
         <li class="nav-item mr-2">
+          <router-link class="nav-link" :to="{ name: 'ListingAssets' }"
+            >Assets
+          </router-link>
+        </li>
+        <li class="nav-item mr-2">
           <router-link class="nav-link" :to="{ name: 'ListingNews' }"
             >News
           </router-link>
@@ -22,6 +27,11 @@
         <li v-if="this.$store.state.user.claims && this.$store.state.user.claims.admin" class="nav-item mr-2">
           <router-link  class="btn btn-primary" :to="{ name: 'Create' }"
             >Add Book
+          </router-link>
+        </li>
+        <li v-if="this.$store.state.user.claims && this.$store.state.user.claims.admin" class="nav-item mr-2">
+          <router-link  class="btn btn-primary" :to="{ name: 'CreateAssets' }"
+            >Add Assets
           </router-link>
         </li>
         <li v-if="this.$store.state.user.claims && this.$store.state.user.claims.admin" class="nav-item mr-2">

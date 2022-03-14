@@ -60,6 +60,15 @@ const routes = [
       import(/* webpackChunkName: "listing" */ "../views/ListingNews.vue"),
   },
   {
+    path: "/listing",
+    name: "ListingAssets",
+    meta: {
+     // isAuthenticated: true, 
+    },
+    component: () =>
+      import(/* webpackChunkName: "listing" */ "../views/ListingAssets.vue"),
+  },
+  {
     path: "/create",
     name: "Create",
     meta: {
@@ -67,6 +76,15 @@ const routes = [
     },
     component: () =>
       import(/* webpackChunkName: "create" */ "../views/Create.vue"),
+  },
+  {
+    path: "/create",
+    name: "CreateAssets",
+    meta: {
+      isAdmin: true,
+    },
+    component: () =>
+      import(/* webpackChunkName: "create" */ "../views/CreateAssets.vue"),
   },
   {
     path: "/create",
@@ -81,6 +99,11 @@ const routes = [
     path: "/view/:id",
     name: "View",
     component: () => import(/* webpackChunkName: "view" */ "../views/View.vue"),
+  },
+  {
+    path: "/view/:id",
+    name: "ViewAssets",
+    component: () => import(/* webpackChunkName: "view" */ "../views/ViewAssets.vue"),
   },
   {
     path: "/view/:id",
